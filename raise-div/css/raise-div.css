@@ -1,0 +1,72 @@
+:root {
+  --mt: 30px;
+  --mt-max: calc(var(--mt) * 4);
+  --transition-duration: 0.3s;
+  --transition-delay: 0.3s;
+  --transition-delay1: 0.3s;
+  --transition-delay2: calc(var(--transition-delay) * 2);
+  --transition-delay3: calc(var(--transition-delay) * 3);
+  --transition-delay4: calc(var(--transition-delay) * 4);
+}
+
+.raise-div {
+  position: relative;
+}
+
+.raise-div > div {
+  position: absolute;
+  width: 150px;
+  height: 75px;
+  background-image: linear-gradient(rgb(250, 104, 104), #d83a3a);
+  transform: skewX(-45deg);
+  transition-duration: var(--transition-duration);
+}
+
+.raise-div > div:nth-child(1) {
+  color: white;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 8px;
+  font-size: 30px;
+  font-weight: bolder;
+  z-index: 5;
+  margin-top: var(--mt-max);
+}
+
+.raise-div:hover > div:nth-child(1) {
+  margin-top: 0;
+}
+
+.raise-div > div:nth-child(2) {
+  z-index: 4;
+  margin-top: var(--mt-max);
+}
+
+.raise-div:hover > div:nth-child(2) {
+  margin-top: var(--mt);
+}
+
+.raise-div > div:nth-child(3) {
+  z-index: 3;
+  margin-top: var(--mt-max);
+}
+
+.raise-div:hover > div:nth-child(3) {
+  margin-top: calc(var(--mt) * 2);
+}
+
+.raise-div > div:nth-child(4) {
+  z-index: 2;
+  margin-top: var(--mt-max);
+}
+
+.raise-div:hover > div:nth-child(4) {
+  margin-top: calc(var(--mt) * 3);
+}
+
+.raise-div > div:nth-child(5) {
+  z-index: 1;
+  margin-top: var(--mt-max);
+}

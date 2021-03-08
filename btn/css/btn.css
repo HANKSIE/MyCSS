@@ -1,0 +1,93 @@
+@import "./variable.css";
+
+.btn {
+  background-color: #414141;
+  color: rgb(23, 147, 230);
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  font-size: 30px;
+  font-family: monospace;
+  letter-spacing: 3px;
+}
+
+.btn > span {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  transition-duration: var(--transition-duration);
+}
+
+.btn > span:nth-child(2n + 1) {
+  height: var(--unit-size);
+}
+
+.btn > span:nth-child(2n) {
+  height: 100%;
+  width: var(--unit-size);
+}
+
+.btn > span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  background-color: var(--primary-color);
+}
+
+.btn:hover > span:nth-child(1) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.btn > span:nth-child(2) {
+  top: 0;
+  right: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  background-color: var(--primary-color);
+  transition-delay: var(--transition-delay-2);
+}
+
+.btn:hover > span:nth-child(2) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition-delay: var(--transition-delay-2);
+}
+
+.btn > span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  background-color: var(--primary-color);
+  transition-delay: var(--transition-delay-3);
+}
+
+.btn:hover > span:nth-child(3) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition-delay: var(--transition-delay-3);
+}
+
+.btn > span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  background-color: var(--primary-color);
+  transition-delay: var(--transition-delay-4);
+}
+
+.btn:hover > span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition-delay: var(--transition-delay-4);
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary-color);
+  transition-delay: var(--transition-delay-5);
+}

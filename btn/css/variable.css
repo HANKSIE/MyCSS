@@ -1,0 +1,9 @@
+:root {
+  --primary-color: rgb(23, 147, 230);
+  --unit-size: 2px;
+  --transition-duration: 0.3s;
+  --transition-delay-2: calc(var(--transition-duration) * 1);
+  --transition-delay-3: calc(var(--transition-duration) * 2);
+  --transition-delay-4: calc(var(--transition-duration) * 3);
+  --transition-delay-5: calc(var(--transition-duration) * 4);
+}

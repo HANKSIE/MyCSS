@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 7px 3px #c4c4c4;
+}
+
+.section-top {
+  height: 30%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(254, 116, 5, 1) 0%,
+    rgb(255, 198, 91) 100%
+  );
+  position: relative;
+}
+
+.section-bottom {
+  flex-grow: 1;
+  align-self: stretch;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-container {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.avatar {
+  background-image: url("../img/cat.jfif");
+  background-position: center;
+  background-size: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.title,
+.disc {
+  font-family: monospace;
+}
+
+.title {
+  text-align: center;
+}
+
+.disc {
+  width: 80%;
+  line-height: 25px;
+}
+
+:root {
+  --amber-color: #ff580a;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20%;
+}
+
+.btn-group > button {
+  margin: 0 15px;
+  font-size: 18px;
+  padding: 3px 20px;
+  min-width: 40%;
+  border-radius: 5px;
+  font-weight: bold;
+  border-color: var(--amber-color);
+  border-style: solid;
+  transition-duration: 0.4s;
+}
+
+.btn-group > button:focus {
+  outline: none;
+}
+
+.btn-group > button:nth-child(1) {
+  background-color: var(--amber-color);
+  color: white;
+}
+
+.btn-group > button:nth-child(2) {
+  color: var(--amber-color);
+  background-color: white;
+}
+
+.btn-group > button:hover {
+  cursor: pointer;
+}
+
+.btn-group > button:nth-child(1):hover {
+  color: var(--amber-color);
+  background-color: white;
+}
+
+.btn-group > button:nth-child(2):hover {
+  background-color: var(--amber-color);
+  color: white;
+}
